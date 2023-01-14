@@ -12,18 +12,6 @@ By default, model will be downloaded to user folder
 - stable diffusion model: `C:\Users\your_name\.cache\huggingface`
 - lama model: `C:\Users\your_name\.cache\torch`
 
-## How to change the directory of model downloaded?
-
-Change `HF_HOME` and `TORCH_HOME` environment variable.
-
-For installer user, change `win_start.bat` file:
-
-```
-set TORCH_HOME=your_directory
-set HF_HOME=your_directory
-@call invoke start
-```
-
 ## How to add command line args to windows installer?
 
 You can add extra args in `tasks.py` file:
@@ -33,3 +21,7 @@ c.run(
     f"lama-cleaner --model {model} --device {device} --port {port} --gui --gui-size 1400 900 --sd-cpu-textencoder"
 )
 ```
+
+## How to change the directory of model downloaded?
+
+Add command line arg `--model-dir=xxxx` (new in 0.32.0)

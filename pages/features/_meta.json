@@ -1,0 +1,8 @@
+{
+  "manual_inpainting_mode": "Manual Inpainting Mode",
+  "file_manager": "File Manager",
+  "inpainting_strategy": "Inpainting Strategy",
+  "interactive_segmentation": "Interactive Segmentation",
+  "croper": "Croper",
+  "custom_mask": "Custom Mask"
+}

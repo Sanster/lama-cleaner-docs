@@ -36,19 +36,20 @@ Lama Cleaner is now running at http://localhost:8080
 
 # All command line args
 
-| Name                 | Description                                                                                                   | Default   |
-| -------------------- | ------------------------------------------------------------------------------------------------------------- | --------- |
-| --model              | lama/ldm/zits/mat/fcf/sd1.5/manga/sd2/paint_by_example                                                        | lama      |
-| --sd-disable-nsfw    | Disable stable-diffusion NSFW checker.                                                                        |           |
-| --sd-cpu-textencoder | Always run stable-diffusion TextEncoder model on CPU.                                                         |           |
-| --sd-enable-xformers | Enable xFormers optimizations. See: [facebookresearch/xformers](https://github.com/facebookresearch/xformers) |           |
-| --local-files-only   | Once the model as downloaded, you can pass this arg to avoid diffusers connect to Hugging Face server         |           |
-| --cpu-offload        | sd/paint_by_example model, offloads all models to CPU, sacrifice speed for reducing vRAM usage.               |           |
-| --no-half            | Using full precision for sd/paint_by_exmaple model                                                            |           |
-| --device             | cuda / cpu / mps                                                                                              | cuda      |
-| --host               | Set to `0.0.0.0` if you want to visit the server on another device                                            | localhost |
-| --port               | Port for backend flask web server                                                                             | 8080      |
-| --gui                | Launch lama-cleaner as a desktop application                                                                  |           |
-| --gui_size           | Set the window size for the application                                                                       | 1200 900  |
-| --input              | Path to image/directory you want to load by default                                                           | None      |
-| --debug              | Enable debug mode for flask web server                                                                        |           |
+| Name                 | Description                                                                                                         | Default   |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------- | --------- |
+| --model              | lama/ldm/zits/mat/fcf/sd1.5/manga/sd2/paint_by_example                                                              | lama      |
+| --model-dir          | Model download directory (by setting XDG_CACHE_HOME environment variable), by default model downloaded to ~/.cache" | lama      |
+| --device             | cuda / cpu / mps                                                                                                    | cuda      |
+| --sd-disable-nsfw    | Disable stable-diffusion NSFW checker.                                                                              |           |
+| --sd-cpu-textencoder | Always run stable-diffusion TextEncoder model on CPU.                                                               |           |
+| --sd-enable-xformers | Enable xFormers optimizations. See: [facebookresearch/xformers](https://github.com/facebookresearch/xformers)       |           |
+| --local-files-only   | Once the model as downloaded, you can pass this arg to avoid diffusers connect to Hugging Face server               |           |
+| --cpu-offload        | sd/paint_by_example model, offloads all models to CPU, sacrifice speed for reducing vRAM usage.                     |           |
+| --no-half            | Using full precision for sd/paint_by_exmaple model. If your generate result is always, use this                     |           |
+| --host               | Set to `0.0.0.0` if you want to visit the server on another device                                                  | localhost |
+| --port               | Port for backend flask web server                                                                                   | 8080      |
+| --gui                | Launch lama-cleaner as a desktop application                                                                        |           |
+| --gui_size           | Set the window size for the application                                                                             | 1200 900  |
+| --input              | Path to image/directory you want to load by default                                                                 | None      |
+| --debug              | Enable debug mode for flask web server                                                                              |           |
