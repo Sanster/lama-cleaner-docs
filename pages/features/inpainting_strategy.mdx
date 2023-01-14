@@ -1,0 +1,9 @@
+# Inpainting Strategy
+
+Lama Cleaner provides three ways to run inpainting model on images, you can change it in settings.
+
+| Strategy     | Description                                                                                            | VRAM   | Speed  |
+| ------------ | ------------------------------------------------------------------------------------------------------ | ------ | ------ |
+| **Original** | Use the resolution of the original image                                                               | High   | ⚡     |
+| **Resize**   | Resize the image to a smaller size before inpainting. The area outside the mask will not loss quality. | Midium | ⚡⚡   |
+| **Crop**     | Crop masking area from the original image to do inpainting                                             | Low    | ⚡⚡⚡ |

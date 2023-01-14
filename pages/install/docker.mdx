@@ -1,0 +1,29 @@
+import { Callout } from "nextra-theme-docs";
+
+# docker
+
+## Run Docker (cpu)
+
+```bash
+docker run -p 8080:8080 \
+-v /path/to/torch_cache:/root/.cache/torch \
+-v /path/to/huggingface_cache:/root/.cache/huggingface \
+--rm cwq1913/lama-cleaner:cpu-0.26.1 \
+lama-cleaner --device=cpu --port=8080 --host=0.0.0.0
+```
+
+## Run Docker (gpu)
+
+- cuda11.6
+- pytorch1.12.1
+- minimum nvidia driver 510.39.01+
+
+```bash
+docker run --gpus all -p 8080:8080 \
+-v /path/to/torch_cache:/root/.cache/torch \
+-v /path/to/huggingface_cache:/root/.cache/huggingface \
+--rm cwq1913/lama-cleaner:gpu-0.26.1 \
+lama-cleaner --device=cuda --port=8080 --host=0.0.0.0
+```
+
+Then open [http://localhost:8080](http://localhost:8080)
