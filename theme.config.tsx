@@ -38,7 +38,10 @@ const config: DocsThemeConfig = {
     text: "",
   },
   primaryHue: 48,
-  darkMode: false,
+  darkMode: true,
+  nextThemes: {
+    defaultTheme: "dark",
+  },
   chat: {
     link: "https://Ko-fi.com/Z8Z1CZJGY",
     icon: (
