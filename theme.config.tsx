@@ -51,6 +51,23 @@ const config: DocsThemeConfig = {
       />
     ),
   },
+  head: () => {
+    return (
+      <>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content={"Lama Cleaner"} />
+        <meta
+          property="og:description"
+          content={"Image Inpainting Tool Powered SOTA AI Model"}
+        />
+      </>
+    );
+  },
+  useNextSeoProps() {
+    return {
+      titleTemplate: "%s – Lama Cleaner",
+    };
+  },
 };
 
 export default config;
