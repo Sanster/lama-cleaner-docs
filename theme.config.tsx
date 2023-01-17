@@ -70,7 +70,10 @@ const config: DocsThemeConfig = {
         name="twitter:description"
         content="Image Inpainting Tool Powered SOTA AI Model"
       />
-      <meta name="twitter:image" content="" />
+      <meta
+        name="twitter:image"
+        content="https://raw.githubusercontent.com/Sanster/lama-cleaner-docs/main/public/desktop_app.png"
+      />
     </>
   ),
   useNextSeoProps() {
