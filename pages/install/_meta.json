@@ -2,5 +2,6 @@
   "pip": "pip",
   "windows_1click_installer": "Windows 1-click installer",
   "docker": "Docker",
-  "try_online": "Try online"
+  "try_online": "Try online",
+  "download_model_manually": "Download model manually"
 }
