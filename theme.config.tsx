@@ -52,14 +52,26 @@ const config: DocsThemeConfig = {
     ),
   },
   head: (
-      <>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:title" content={"Lama Cleaner"} />
-        <meta
-          property="og:description"
-          content={"Image Inpainting Tool Powered SOTA AI Model"}
-        />
-      </>
+    <>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta property="og:title" content="Lama Cleaner" />
+      <meta
+        property="og:description"
+        content="Image Inpainting Tool Powered SOTA AI Model"
+      />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta property="twitter:domain" content="lama-cleaner-docs.vercel.app" />
+      <meta
+        property="twitter:url"
+        content="https://lama-cleaner-docs.vercel.app/"
+      />
+      <meta name="twitter:title" content="Lama Cleaner" />
+      <meta
+        name="twitter:description"
+        content="Image Inpainting Tool Powered SOTA AI Model"
+      />
+      <meta name="twitter:image" content="" />
+    </>
   ),
   useNextSeoProps() {
     return {
