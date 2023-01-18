@@ -12,10 +12,14 @@ If CUDA OOM happens to you, in addition to reducing the size of your images, fol
 
 - Using [Croper & Resize](https://lama-cleaner-docs.vercel.app/features/croper_resize)
 - Add `--sd-disable-nsfw` and `--sd-cpu-textencoder` to the command line
-- Add `--sd-disable-nsfw` and `--cpu-offload`(save more GPU memory but much slower) to the command line
+- Add `--cpu-offload`(save more GPU memory but much slower) to the command line
+  - fp16: 512x512 image needs 2GB GPU memory
+  - no_half: 512x512 image needs 3GB GPU memory
 - Install [xformers](https://github.com/facebookresearch/xformers) and add `--sd-enable-xformers` to the command line
 
 ## Paint By Example
 
 - Using [Croper & Resize](https://lama-cleaner-docs.vercel.app/features/croper_resize)
 - Add `--cpu-offload`(save more GPU memory but much slower) to the command line
+  - fp16: 512x512 image needs 2.6GB GPU memory
+  - no_half: 512x512 image needs 4.5GB GPU memory

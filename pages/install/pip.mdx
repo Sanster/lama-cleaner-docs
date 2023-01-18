@@ -45,7 +45,7 @@ Lama Cleaner is now running at http://localhost:8080
 | --sd-cpu-textencoder | Always run stable-diffusion TextEncoder model on CPU.                                                               |           |
 | --sd-enable-xformers | Enable xFormers optimizations. See: [facebookresearch/xformers](https://github.com/facebookresearch/xformers)       |           |
 | --local-files-only   | Once the model as downloaded, you can pass this arg to avoid diffusers connect to Hugging Face server               |           |
-| --cpu-offload        | sd/paint_by_example model, offloads all models to CPU, sacrifice speed for reducing vRAM usage.                     |           |
+| --cpu-offload        | sd/paint_by_example model. With cpu offload sd model only needs 2GB GPU memory (image size 512x512)                 |           |
 | --no-half            | Using full precision for sd/paint_by_exmaple model. If your generate result is always, use this                     |           |
 | --host               | Set to `0.0.0.0` if you want to visit the server on another device                                                  | localhost |
 | --port               | Port for backend flask web server                                                                                   | 8080      |
