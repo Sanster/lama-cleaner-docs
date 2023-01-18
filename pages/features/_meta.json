@@ -3,7 +3,7 @@
   "file_manager": "File Manager",
   "inpainting_strategy": "Inpainting Strategy",
   "Interactive_segmentation": "Interactive Segmentation",
-  "croper": "Croper",
+  "croper_resize": "Croper & Resize",
   "custom_mask": "Custom Mask",
   "desktop_app": "Desktop Application"
 }
