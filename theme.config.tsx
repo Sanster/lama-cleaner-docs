@@ -33,6 +33,9 @@ const config: DocsThemeConfig = {
     link: gitRepo,
   },
   docsRepositoryBase: "https://github.com/Sanster/lama-cleaner-docs",
+  sidebar: {
+    defaultMenuCollapseLevel: 0,
+  },
   footer: {
     component: <></>,
     text: "",

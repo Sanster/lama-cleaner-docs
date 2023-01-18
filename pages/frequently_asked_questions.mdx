@@ -25,3 +25,16 @@ c.run(
 ## How to change the directory of model downloaded?
 
 Add command line arg `--model-dir=xxxx` (new in 0.32.0)
+
+## Why I get all black or green result?
+
+- sd1.5/sd2
+- paint_by_example
+
+Some GPUs don't support half precision floating point numbers (a known issue with 16xx cards),
+a green or black screen may appear instead of the generated pictures.
+This may be fixed by using the command line arguments `--no-half`
+
+## How to avoid GPU memory OOM?
+
+See [Memory](https://lama-cleaner-docs.vercel.app/features/memory)
