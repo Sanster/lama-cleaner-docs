@@ -2,14 +2,11 @@ import { Callout } from "nextra-theme-docs";
 
 ## Windows 1-Click Installer
 
-1. Download [lama-cleaner-win.zip](https://github.com/Sanster/lama-cleaner/releases/download/win_one_click_installer/lama-cleaner-win.zip) and unzip it.
+1. Download [lama-cleaner-win-v2.zip](https://github.com/Sanster/lama-cleaner/releases/download/0.34.0/lama-cleaner-win-v2.zip) and unzip it.
+1. Double click `win_config.bat`, it will take a few minutes to install all the dependencies(around 8G), and open the web config page in your browser.
+   Configure according to your needs, such as the path to download the model, whether to save vRAM(CPU Offload), etc.
+   Click the `Save configurations` button will save an `installer_config.json` file in the same directory.
 
-<Callout type="info" emoji="ℹ️">
-  Please download this
-  [tasks.py](https://raw.githubusercontent.com/Sanster/lama-cleaner/main/scripts/user_scripts/tasks.py)
-  and replace the tasks.py file from the zip. The main difference is sd1.5 model
-  no more need Hugging Face Access Token
-</Callout>
+![web_config_page](../../public/web_config_page.png)
 
-1. Double click `win_config.bat`, it will take a few minutes to install all the dependencies, and ask you to choice model and device.
-1. Double click `win_start.bat` to start the server, at first time it take a few minutes to download the model(about 4G).
+1. Double click `win_start.bat` to start the server, at first time it take a few minutes to download the model.
