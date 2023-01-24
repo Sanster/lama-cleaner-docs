@@ -1,3 +1,5 @@
+import { Callout } from "nextra-theme-docs";
+
 # Q&A
 
 ## How to update to the latest version?
@@ -9,22 +11,35 @@
 
 By default, model will be downloaded to user folder
 
-- stable diffusion model: `C:\Users\your_name\.cache\huggingface`
-- lama model: `C:\Users\your_name\.cache\torch`
+- sd/paint_by_example models: `~/.cache/huggingface/diffusers`. For windows users, it's `C:\Users\your_name\.cache\huggingface\diffusers`
+- lama and other models: `~/.cache/torch/hub/checkpoints`. For windows users, it's `C:\Users\your_name\.cache\torch\hub\checkpoints`
 
 ## How to add command line args to windows installer?
 
-You can add extra args in `tasks.py` file:
-
-```python filename="tasks.py"
-c.run(
-    f"lama-cleaner --model {model} --device {device} --port {port} --gui --gui-size 1400 900 --sd-cpu-textencoder"
-)
-```
+Double click `win_config.bat`, and you can config all command line args in web UI.
 
 ## How to change the directory of model downloaded?
 
 Add command line arg `--model-dir=xxxx` (new in 0.32.0)
+
+## How to completely uninstall lama-cleaner?
+
+### Delete lama-cleaner program
+
+- For windows installer: delete the unziped folder
+- For pip: `pip uninstall lama-cleaner`
+
+### Delete downloaded models:
+
+By default lama-cleaner download model to `~/.cache/torch/hub/checkpoints/` or `~/.cache/huggingface/diffusers`(sd/paint_by_example).
+For windows users, it's `C:\Users\your_name\.cache\torch\hub\checkpoints\` or `C:\Users\your_name\.cache\huggingface\diffusers`.
+
+<Callout type="warning" emoji="⚠️">
+  The default model cache directory may contain other models, so you should only
+  delete the lama-cleaner related models.
+</Callout>
+
+If you used `--model-dir=xxxx` to change the model directory, you safely delete the directory you specified.
 
 ## Why I get all black or green result?
 
