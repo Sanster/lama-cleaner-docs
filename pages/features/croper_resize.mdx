@@ -2,11 +2,11 @@ import Image from "next/image";
 import YouTube from "../../components/youtube";
 import sidepanelResizeGif from "../../public/sidepanel_resize.gif";
 
-# Croper
+# Cropper
 
 Available for `sd1.5/sd2` and `paint_by_example` models.
 
-When you have a large image, you can use Croper to crop it into smaller image which requires less memory and time to run inpainting.
+When you have a large image, you can use Cropper to make the model only run on part of the original image which requires less vRAM and time.
 
 <YouTube youTubeId="NSAN3TzfhaI" />
 
@@ -14,6 +14,7 @@ When you have a large image, you can use Croper to crop it into smaller image wh
 
 Available for `sd1.5/sd2` and `paint_by_example` models.
 
-Resize the image before inpainting, then scale up the inpainting area to fill the origin area, the area outside the mask will not lose quality. This option can be used to save vRAM.
+Resize the image before inpainting, then scale up the inpainting area to fill the origin area, the area outside the mask will not lose quality.
+This option can be used to save vRAM.
 
 <Image src={sidepanelResizeGif} alt="sidepanel resize gif" height={500} />

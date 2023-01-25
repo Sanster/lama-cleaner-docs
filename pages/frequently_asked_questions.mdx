@@ -7,14 +7,14 @@ import { Callout } from "nextra-theme-docs";
 - For installer: Rerun `win_config.bat` will install the newest version of lama-cleaner
 - For pip: `pip install -U lama-cleaner`
 
-## Where is model downloaded?
+## Where are models downloaded?
 
-By default, model will be downloaded to user folder
+By default, models will be downloaded to the user folder
 
-- sd/paint_by_example models: `~/.cache/huggingface/diffusers`. For windows users, it's `C:\Users\your_name\.cache\huggingface\diffusers`
-- lama and other models: `~/.cache/torch/hub/checkpoints`. For windows users, it's `C:\Users\your_name\.cache\torch\hub\checkpoints`
+- sd/paint_by_example models: `~/.cache/huggingface/diffusers`. For Windows users, it's `C:\Users\your_name\.cache\huggingface\diffusers`
+- lama and other models: `~/.cache/torch/hub/checkpoints`. For Windows users, it's `C:\Users\your_name\.cache\torch\hub\checkpoints`
 
-## How to add command line args to windows installer?
+## How to add command line args to the windows installer?
 
 Double click `win_config.bat`, and you can config all command line args in web UI.
 
@@ -26,13 +26,13 @@ Add command line arg `--model-dir=xxxx` (new in 0.32.0)
 
 ### Delete lama-cleaner program
 
-- For windows installer: delete the unziped folder
+- For windows installer: delete the unzipped folder
 - For pip: `pip uninstall lama-cleaner`
 
 ### Delete downloaded models:
 
 By default lama-cleaner download model to `~/.cache/torch/hub/checkpoints/` or `~/.cache/huggingface/diffusers`(sd/paint_by_example).
-For windows users, it's `C:\Users\your_name\.cache\torch\hub\checkpoints\` or `C:\Users\your_name\.cache\huggingface\diffusers`.
+For Windows users, it's `C:\Users\your_name\.cache\torch\hub\checkpoints\` or `C:\Users\your_name\.cache\huggingface\diffusers`.
 
 <Callout type="warning" emoji="⚠️">
   The default model cache directory may contain other models, so you should only
@@ -41,12 +41,12 @@ For windows users, it's `C:\Users\your_name\.cache\torch\hub\checkpoints\` or `C
 
 If you used `--model-dir=xxxx` to change the model directory, you safely delete the directory you specified.
 
-## Why I get all black or green result?
+## Why do I get all black or green results?
 
 - sd1.5/sd2
 - paint_by_example
 
-Some GPUs don't support half precision floating point numbers (a known issue with 16xx cards),
+Some GPUs don't support half-precision floating point numbers (a known issue with 16xx cards),
 a green or black screen may appear instead of the generated pictures.
 This may be fixed by using the command line arguments `--no-half`
 
