@@ -2,11 +2,28 @@ import { Callout } from "nextra-theme-docs";
 
 ## Windows 1-Click Installer
 
-1. Download [lama-cleaner-win-v2.zip](https://github.com/Sanster/lama-cleaner/releases/download/0.34.0/lama-cleaner-win-v2.zip) and unzip it.
-1. Double click `win_config.bat`, it will take a few minutes to install all the dependencies(around 8G), and open the web config page in your browser.
-   Configure according to your needs, such as the path to download the model, whether to save vRAM(CPU Offload), etc.
-   Click the `Save configurations` button will save an `installer_config.json` file in the same directory.
+<div className="steps-container">
+
+### Download Installer
+
+Get the installer at [here](https://panicbyte.lemonsqueezy.com/checkout/buy/add85395-546d-481e-a8c4-777a0da999bb), name your own price.
+
+<Callout type="info" emoji="🎉">
+  Tips: Change the price to 0 to get it for free.
+</Callout>
+
+### Configure
+
+Unzip the package, you will get a `win_config.bat` and a `win_start.bat` file.
+
+Double click `win_config.bat`, it will take a few minutes to install all the dependencies(around 8G), and open the web config page in your browser.
+Configure according to your needs, such as the path to download the model, whether to save vRAM(CPU Offload), etc.
+Click the `Save configurations` button will save an `installer_config.json` file in the same directory.
 
 ![web_config_page](../../public/web_config_page.png)
 
-1. Double click `win_start.bat` to start the server, at first time it take a few minutes to download the model.
+### Start Lama Cleaner
+
+Double click `win_start.bat` to start the server, the first time it takes a few minutes to download the model.
+
+</div>
