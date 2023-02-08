@@ -18,6 +18,10 @@ By default, models will be downloaded to the user folder
 
 Double click `win_config.bat`, and you can config all command line args in web UI.
 
+## How to change GPU device to use in windows installer?
+
+Assume two GPUs, and you want to use second one, add `SET CUDA_VISIBLE_DEVICES=1` before lama-cleaner start in [win_start.bat](https://github.com/Sanster/lama-cleaner/blob/main/scripts/user_scripts/win_start.bat#L7)
+
 ## How to change the directory of model downloaded?
 
 Add command line arg `--model-dir=xxxx` (new in 0.32.0)
