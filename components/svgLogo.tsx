@@ -1,25 +1,28 @@
 import React from "react"
 
-export const LogoWrapper = ({ icon }) => {
+export const LogoWrapper = ({ icon, href }) => {
   return (
-    <div
-      style={{
-        height: "42px",
-        display: "flex",
-        justifyItems: "center",
-        alignItems: "center",
-        paddingLeft: 8,
-        paddingRight: 8,
-      }}
-    >
-      {icon}
-    </div>
+    <a href={href} target="_blank">
+      <div
+        style={{
+          height: "42px",
+          display: "flex",
+          justifyItems: "center",
+          alignItems: "center",
+          paddingLeft: 8,
+          paddingRight: 8,
+        }}
+      >
+        {icon}
+      </div>
+    </a>
   )
 }
 
 export const GitHubCopilotLogo = () => {
   return (
     <LogoWrapper
+      href="https://github.com/features/copilot"
       icon={
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -103,18 +106,17 @@ export const GitHubCopilotLogo = () => {
 export const YourLogo = () => {
   return (
     <LogoWrapper
+      href="https://ko-fi.com/Z8Z1CZJGY/tiers"
       icon={
-        <a href="https://ko-fi.com/Z8Z1CZJGY/tiers" target="__blank">
-          <div
-            style={{
-              border: "1px dashed #383838",
-              borderRadius: "8px",
-              padding: 8,
-            }}
-          >
-            <p>❤️ Your logo</p>
-          </div>
-        </a>
+        <div
+          style={{
+            border: "1px dashed #383838",
+            borderRadius: "8px",
+            padding: 8,
+          }}
+        >
+          <p>❤️ Your logo</p>
+        </div>
       }
     />
   )
