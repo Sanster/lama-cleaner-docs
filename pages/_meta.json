@@ -4,5 +4,8 @@
   "models": "Models",
   "features": "Features",
   "memory": "Memory",
+  "---": {
+    "type": "separator"
+  },
   "frequently_asked_questions": "Frequently Asked Questions"
 }
