@@ -28,7 +28,13 @@ Add command line arg `--model-dir=xxxx` (new in 0.32.0)
 
 ## How to install Xformers in Windows Installer v2?
 
-Check here: https://github.com/Sanster/lama-cleaner/issues/207#issuecomment-1426569702
+Change three lines in `win_confg.bat`:
+
+```batch
+@call conda install -y -c conda-forge cudatoolkit=11.7
+@call pip install torch==1.13.1+cu117 --extra-index-url https://download.pytorch.org/whl/cu117
+@call pip install xformers
+```
 
 ## How to completely uninstall lama-cleaner?
 
