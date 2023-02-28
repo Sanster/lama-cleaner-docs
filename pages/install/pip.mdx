@@ -2,21 +2,19 @@ import { Callout } from "nextra-theme-docs"
 
 # pip
 
-The easiest way to install Lama Cleaner is to install it via `pip`.
+The easiest way to install Lama Cleaner is to install it via `pip`(support python 3.7 ~ 3.10).
 
 ```shell
+# In order to use the GPU, install cuda version of pytorch first.
+# pip install torch==1.13.1+cu117 --extra-index-url https://download.pytorch.org/whl/cu117
 pip install lama-cleaner
 ```
-
-<Callout type="info" emoji="ℹ️">
-  If pip install failed please check you python version is between 3.7 ~ 3.10
-</Callout>
 
 After finishing the installation, you can start the server by `lama-cleaner` command,
 model file will be downloaded at first time used.
 
 ```bash
-lama-cleaner --model=lama --device=cpu --port=8080
+lama-cleaner --model=lama --device=cuda --port=8080
 ```
 
 Lama Cleaner is now running at http://localhost:8080
