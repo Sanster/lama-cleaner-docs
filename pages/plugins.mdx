@@ -1,0 +1,129 @@
+import YouTube from "../components/youtube"
+
+# Plugins
+
+When starting the Lama Cleaner service, you can enable plugins through command line parameters.
+And the enabled plugins will be available in the **top-left corner**.
+
+![crop](../public/plugins.jpg)
+
+## RealESRGAN
+
+[RealESRGAN](https://github.com/xinntao/Real-ESRGAN) is a library to do image Super-Resolution.
+
+![realesrgan](../public/realesrgan_demo.jpeg)
+
+Install dependency package:
+
+```bash
+pip install realesrgan
+```
+
+Command line argument to enable RealESRGAN:
+
+```bash
+--enable-realesrgan --realesrgan-model RealESRGAN_x4plus --realesrgan-device cuda
+```
+
+Available models:
+
+1. RealESRGAN_x4plus: for general scenes
+1. RealESRGAN_x4plus_anime_6B: optimized for anime images with much smaller model size.
+1. realesr-general-x4v3: a tiny small model for general scenes
+
+Available device:
+
+1. cuda
+1. cpu
+1. mps
+
+## GFPGAN
+
+[GFPGAN](https://github.com/TencentARC/GFPGAN) is a library to do face restoration.
+
+Install dependency package:
+
+```bash
+pip install gfpgan
+```
+
+Command line argument to enable GFPGAN:
+
+```bash
+--enable-gfpgan --gfpgan-device cuda
+```
+
+Available device:
+
+1. cuda
+2. cpu
+3. mps
+
+## RestoreFormer
+
+[RestoreFormer](https://github.com/wzhouxiff/RestoreFormer) is a library to do face restoration.
+
+Install dependency package:
+
+```bash
+pip install realesrgan
+```
+
+Command line argument to enable RestoreFormer:
+
+```bash
+--enable-restoreformer --restoreformer-device cuda
+```
+
+Available device:
+
+1. cuda
+2. cpu
+3. mps
+
+## Remove Background
+
+[Remove background](https://github.com/danielgatis/rembg) from the picture, always run on CPU.
+
+Install dependency package:
+
+```bash
+pip install rembg
+```
+
+Command line argument to enable Remove Background:
+
+```bash
+--enable-remove-bg
+```
+
+## Interactive Segmentation
+
+[ClickSEG](https://github.com/XavierCHEN34/ClickSEG) is library to do Interactive Segmentation.
+It use the use's mouse click position and image as input and output a segmented mask.
+Users can choose the next click position(positive or negative) based on the output. It's fun and might be useful in some scenarios.
+
+Command line argument to enable Interactive Segmentation Plugin:
+
+```bash
+--enable-interactive-seg
+```
+
+The basic operation process is as follows:
+
+- Toggle `Interactive Segmentation` mode
+- Left click(positive) on the image to select things you want to mask
+- Right click(negative) on the image to exclude things you don't want to mask
+- Click `Accept`
+- Complete the mask with the brush (If the result of interactive segmentation is not good)
+- Inpainting!
+
+<YouTube youTubeId="xHdo8a4Mn2g" />
+
+## Make GIF
+
+Command line argument to enable Make GIF plugin:
+
+```bash
+--enable-gif
+```

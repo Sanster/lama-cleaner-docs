@@ -3,6 +3,7 @@
   "install": "Install",
   "models": "Models",
   "features": "Features",
+  "plugins": "Plugins",
   "memory": "Memory",
   "---": {
     "type": "separator"
