@@ -110,14 +110,12 @@ Command line argument to enable Remove Background:
 
 ## Interactive Segmentation
 
-[ClickSEG](https://github.com/XavierCHEN34/ClickSEG) is library to do Interactive Segmentation.
-It use the use's mouse click position and image as input and output a segmented mask.
-Users can choose the next click position(positive or negative) based on the output. It's fun and might be useful in some scenarios.
+The [Segment Anything Model](https://github.com/facebookresearch/segment-anything) can produce high quality object masks from user click.
 
 Command line argument to enable Interactive Segmentation Plugin:
 
 ```bash
---enable-interactive-seg
+--enable-interactive-seg --interactive-seg-model=vit_l  --interactive-seg-device=cuda
 ```
 
 The basic operation process is as follows:
@@ -129,7 +127,7 @@ The basic operation process is as follows:
 - Complete the mask with the brush (If the result of interactive segmentation is not good)
 - Inpainting!
 
-<YouTube youTubeId="xHdo8a4Mn2g" />
+<YouTube youTubeId="oLYNGFDI4dc" />
 
 ## Make GIF
 
