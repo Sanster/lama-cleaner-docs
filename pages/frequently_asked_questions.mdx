@@ -20,6 +20,10 @@ By default, models will be downloaded to the user folder
 - sd/paint_by_example models: `~/.cache/huggingface/diffusers`. For Windows users, it's `C:\Users\your_name\.cache\huggingface\diffusers`
 - lama and other models: `~/.cache/torch/hub/checkpoints`. For Windows users, it's `C:\Users\your_name\.cache\torch\hub\checkpoints`
 
+## How to change the directory of model downloaded?
+
+Add command line arg `--model-dir=xxxx` (new in 0.32.0)
+
 ## How to add command line args to the windows installer?
 
 Double click `win_config.bat`, and you can config all command line args in web UI.
@@ -28,9 +32,11 @@ Double click `win_config.bat`, and you can config all command line args in web U
 
 Assume two GPUs, and you want to use second one, add `SET CUDA_VISIBLE_DEVICES=1` before lama-cleaner start in [win_start.bat](https://github.com/Sanster/lama-cleaner/blob/main/scripts/user_scripts/win_start.bat#L7)
 
-## How to change the directory of model downloaded?
+## windows installer error
 
-Add command line arg `--model-dir=xxxx` (new in 0.32.0)
+![window-installer-change-folder](../public/window-installer-change-folder.png)
+
+This is caused by moving the directory after unpacking zip.
 
 ## How to install Xformers in Windows Installer v2?
 
@@ -41,6 +47,10 @@ Change three lines in `win_confg.bat`:
 @call pip install torch==1.13.1+cu117 --extra-index-url https://download.pytorch.org/whl/cu117
 @call pip install xformers
 ```
+
+## m1/m2 chip error: illegal hardware instruction
+
+see: https://github.com/Sanster/lama-cleaner/issues/268
 
 ## How to completely uninstall lama-cleaner?
 
