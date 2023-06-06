@@ -24,14 +24,5 @@ You can learn how to create a inpainting model from **any** diffusion model in A
 Then you can load it into Lama Cleaner with following command:
 
 ```bash
---model sd1.5 --sd-local-model-path /path/to/model.ckpt
-```
-
-## Enable ControlNet Inpainting
-
-Thanks for https://github.com/mikonvergence/ControlNetInpaint, now you can use ControlNet inpainting when using sd1.5 model.
-This can make your inpainting results more consistent with the original structure. Run lama-cleaner with`--sd-controlnet` to enable it.
-
-```bash
---model sd1.5 --sd-controlnet
+--model sd1.5 --sd-local-model-path /path/to/model-inpaint.ckpt
 ```
