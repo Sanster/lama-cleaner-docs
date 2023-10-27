@@ -2,7 +2,6 @@
   "manual_inpainting_mode": "Manual Inpainting Mode",
   "file_manager": "File Manager",
   "inpainting_strategy": "Inpainting Strategy",
-  "Interactive_segmentation": "Interactive Segmentation",
   "croper_resize": "Croper & Resize",
   "custom_mask": "Custom Mask",
   "desktop_app": "Desktop Application"
