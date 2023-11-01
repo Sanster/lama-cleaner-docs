@@ -1,4 +1,4 @@
-import { Callout } from "nextra-theme-docs";
+import { Callout } from "nextra-theme-docs"
 
 # docker
 
@@ -7,22 +7,25 @@ import { Callout } from "nextra-theme-docs";
 ```bash
 docker run -p 8080:8080 \
 -v /path/to/cache_dir:/root/.cache/ \
---rm cwq1913/lama-cleaner:cpu-0.33.0 \
+--rm cwq1913/lama-cleaner:cpu-1.2.5 \
 lama-cleaner --device=cpu --port=8080 --host=0.0.0.0
 ```
 
 ## Run Docker (gpu)
 
-- cuda: 11.7
-- pytorch: 1.13.1
+- cuda: 11.8
+- pytorch: 2.1.0
 - minimum nvidia driver: 515.43.04+
-- xformers: 0.0.16rc425
+- xformers: 0.0.22.post4
 
 ```bash
 docker run --gpus all -p 8080:8080 \
 -v /path/to/cache_dir:/root/.cache/ \
---rm cwq1913/lama-cleaner:gpu-0.33.0 \
+--rm cwq1913/lama-cleaner:gpu-1.2.5 \
 lama-cleaner --device=cuda --port=8080 --host=0.0.0.0
 ```
+
+The dependencies for all the plugins are already included in the image.
+You can refer to this [doc](https://lama-cleaner-docs.vercel.app/plugins) to add the corresponding startup parameters.
 
 Then open [http://localhost:8080](http://localhost:8080)
